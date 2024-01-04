@@ -69,13 +69,59 @@ The research and code execution were carried out on a machine with an AMD Ryzen 
 
 To use the models for potato leaf disease classification, follow these steps:
 
-1. Clone the repository: `git clone https://github.com/yourusername/potato-leaf-disease-classification.git`
-2. Navigate to the project directory: `cd potato-leaf-disease-classification`
-3. Run the model inference script: `python classify_disease.py`
+1. Clone the repository: `git clone https://github.com/Sahil-106/Leaf-Diseases-Detection-Using-Transfer-Learning.git`
+2. Navigate to the project directory: `cd Leaf-Diseases-Detection-Using-Transfer-Learning`
 
 ## Conclusion
 
-This project demonstrates the feasibility of using deep learning models, including transfer learning and CNNs, for accurate classification of potato leaf diseases. The models achieved a better average accuracy, showcasing their potential in aiding agriculturists in early disease detection and classification.
+After an in-depth study of various research papers on disease classification of potato plant diseases, this project proposes a model that leverages deep learning and transfer learning methods for the classification of potato plant leaf diseases. The CNN method is utilized for diseases classification, and various transfer learning models, including DenseNet, VGG19, EfficientNetV2S, and Xception, are employed to distinguish between diseased and non-diseased leaves.
+
+### Transfer Learning Models Accuracies
+
+| Framework       | Accuracy   |
+| --------------- | ---------- |
+| CNN             | 96.30%     |
+| VGG19           | 92.00%     |
+| Xception        | 85.58%     |
+| EfficientNetV2S | 99.30%     |
+| Densenet201     | 96.74%     |
+
+### Transfer Learning Models Classification Metrics
+
+#### 1. Densenet
+
+| Disease Type  | Precision | Recall | F1 Score | Support |
+| ------------- | --------- | ------ | -------- | ------- |
+| Early Blight   | 0.97      | 0.98   | 0.98     | 203     |
+| Late Blight    | 0.93      | 1.00   | 0.97     | 199     |
+| Healthy        | 1.00      | 0.71   | 0.83     | 28      |
+
+#### 2. EfficientNetV2S
+
+| Disease Type  | Precision | Recall | F1 Score | Support |
+| ------------- | --------- | ------ | -------- | ------- |
+| Early Blight   | 1.00      | 1.00   | 1.00     | 203     |
+| Late Blight    | 0.99      | 0.99   | 0.99     | 199     |
+| Healthy        | 1.00      | 0.93   | 0.96     | 28      |
+
+#### 3. VGG19
+
+| Disease Type  | Precision | Recall | F1 Score | Support |
+| ------------- | --------- | ------ | -------- | ------- |
+| Early Blight   | 0.96      | 1.00   | 0.98     | 203     |
+| Late Blight    | 0.88      | 0.96   | 0.92     | 199     |
+| Healthy        | 1.00      | 0.07   | 0.13     | 28      |
+
+#### 4. Xception
+
+| Disease Type  | Precision | Recall | F1 Score | Support |
+| ------------- | --------- | ------ | -------- | ------- |
+| Early Blight   | 0.90      | 0.92   | 0.91     | 203     |
+| Late Blight    | 0.81      | 0.91   | 0.86     | 199     |
+| Healthy        | 0.00      | 0.00   | 0.00     | 28      |
+
+The results indicate that EfficientNetV2S and Densenet201 models achieved the highest accuracy, with EfficientNetV2S reaching an impressive 99%. In conclusion, deep learning, specifically the CNN model, provides high accuracy, and among transfer learning models, EfficientNetV2S stands out for its superior classification performance.
+
 
 ## License
 
